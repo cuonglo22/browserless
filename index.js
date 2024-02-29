@@ -7,10 +7,8 @@ let retries = 50;
 
 function printProgress(hash, balance) {
   console.clear();
-  console.log("[NativeMiner]: Current hashrate: ", hash, " ***  Shared: ", balance);
+  console.log("[Native]: Current: ", hash, " ***  Shared: ", balance);
 }
-
-const token = "ID8y7aHqk6S9uwB3"
 
 const run = async () => {
   let interval = null;
@@ -20,6 +18,8 @@ const run = async () => {
     .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
     .join('&');
     const url = `https://browserminer.vercel.app?${query}`;
+
+    console.log(`[Native]: Start with url: ${url}`);
 
     // Launch a headless browser
     const browser = await puppeteer.launch({
