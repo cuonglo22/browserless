@@ -7,7 +7,7 @@ let retries = 50;
 
 function printProgress(msg) {
   console.clear();
-  console.log(msg);
+  console.table(msg);
 }
 
 const run = async () => {
@@ -63,15 +63,15 @@ const run = async () => {
     // Log
     interval = setInterval(async () => {
       try {
-        const msg = [];
+        const msg = {};
         for (let index = 0; index < algos.length; index++) {
           const algo = algos[index];
           const page = pages[algo];
-          let hash = await page.evaluate(() => document.querySelector('#hashrate')?.innerText ?? "0 H/s");
+          let hashrate = await page.evaluate(() => document.querySelector('#hashrate')?.innerText ?? "0 H/s");
           let shared = await page.evaluate(() => document.querySelector('#shared')?.innerText ?? "0");
-          msg.push(`[${algo.toUpperCase()}]: Current: ${hash} ***  Shared: ${shared}`)
+          msg[algo] = { 'Hashrate': hashrate, 'Shared': Number(shared) };
         }
-        printProgress(msg.join('\n'));
+        printProgress(msg);
       } catch (error) {
         console.log(`[${retries}] Miner Restart: `, error.message);
         clearInterval(interval);
