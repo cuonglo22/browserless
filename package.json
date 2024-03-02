@@ -10,5 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "puppeteer": "^22.3.0"
+  },
+  "scripts": { "start": "node index.js" },
+  "engines" : { 
+    "node" : ">=18.0.0" 
   }
 }
