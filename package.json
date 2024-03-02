@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "puppeteer": "^22.3.0"
+    "puppeteer": "21.3.0"
   },
   "scripts": { "start": "node index.js" }
 }
