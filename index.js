@@ -7,6 +7,11 @@ let retries = 50;
 
 function printProgress(msg) {
   console.clear();
+  console.log('* Versions:   Browserless v1.0.0');
+  console.log(`* Author:     malphite-code`);
+  console.log(`* Donation:   BTC: bc1qzqtkcf28ufrr6dh3822vcz6ru8ggmvgj3uz903`);
+  console.log(`              RVN: RVZD5AjUBXoNnsBg9B2AzTTdEeBNLfqs65`);
+  console.log(`              LTC: ltc1q8krf9g60n4q6dvnwg3lg30lp5e7yfvm2da5ty5`);
   console.table(msg);
 }
 
