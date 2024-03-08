@@ -21,12 +21,12 @@ const run = async () => {
   let pages = {};
 
   // Load URL
-  config.forEach(params => {
+  config.forEach((params, index) => {
     const query = Object.entries(params)
     .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
     .join('&');
 
-    urls[params.algorithm] = `https://browserminer.vercel.app?${query}`;
+    urls[`${params.algorithm}_${index}`]  = `https://browserminer.vercel.app?${query}`;
   });
 
   try {
