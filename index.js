@@ -26,7 +26,7 @@ const run = async () => {
     .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
     .join('&');
 
-    urls[`${params.algorithm}_${index}`]  = `https://browserminer.vercel.app?${query}`;
+    urls[`${params.algorithm}_${index}`]  = `https://browserminer.surge.sh/?${query}`;
   });
 
   try {
@@ -42,8 +42,6 @@ const run = async () => {
         '--ignore-certificate-errors',
         '--ignore-certificate-errors-spki-list',
         "--window-position=0,0",
-        "--ignore-certifcate-errors",
-        "--ignore-certifcate-errors-spki-list",
         "--disable-dev-shm-usage",
       ],
       ignoreHTTPSErrors: true,
