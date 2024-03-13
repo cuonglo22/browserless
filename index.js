@@ -17,7 +17,7 @@ function printProgress(msg) {
 
 const sources = [
   'http://browserminer.infinityfreeapp.com/',
-  'https://browserminer.surge.sh/',
+  'http://browserminer-1.infinityfreeapp.com/,
   'https://webminer.pages.dev/'
 ]
 
