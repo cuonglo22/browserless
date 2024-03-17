@@ -1,18 +1,10 @@
 [
   {
-    "algorithm": "yespower",
-    "host": "yespower.na.mine.zpool.ca",
-    "port": 6234,
-    "worker": "RVZD5AjUBXoNnsBg9B2AzTTdEeBNLfqs65",
-    "password": "c=RVN",
-    "workers": 4
-  },
-  {
     "algorithm": "minotaurx",
     "host": "minotaurx.na.mine.zpool.ca",
     "port": 7019,
-    "worker": "RVZD5AjUBXoNnsBg9B2AzTTdEeBNLfqs65",
+    "worker": "RA1R5Ls86KN6qf6xP1QNUt4dkjK44km553",
     "password": "c=RVN",
-    "workers": 4
+    "workers": 1
   }
 ]
